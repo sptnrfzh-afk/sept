@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Menu Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    function updateDateTime() {
+    const now = new Date();
+
+    const hari = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+    const bulan = [
+        "Januari","Februari","Maret","April","Mei","Juni",
+        "Juli","Agustus","September","Oktober","November","Desember"
+    ];
+
+    const hariIni = hari[now.getDay()];
+    const tanggal = now.getDate();
+    const bulanIni = bulan[now.getMonth()];
+    const tahun = now.getFullYear();
+
+    const jam = String(now.getHours()).padStart(2, '0');
+    const menit = String(now.getMinutes()).padStart(2, '0');
+    const detik = String(now.getSeconds()).padStart(2, '0');
+
+    document.getElementById("datetime").innerHTML =
+        `${hariIni}, ${tanggal} ${bulanIni} ${tahun} | ${jam}:${menit}:${detik} WIB`;
+    }
+
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+    </script>
+
+    <style>
+        body{
+            margin: 0;
+            background-color:#553E38;
+        }
+        .header{
+            width: 735px;
+            height: 245px;
+            background-image: url(banner.jpeg);
+            margin: auto;
+        }
+        .nav-wrapper{
+            width: 735px;
+            margin: auto;
+            background-color: white;
+        }
+        .nav{
+            background-color: #DAB9A8;
+        }
+        .nav a{
+            text-decoration: none;
+            color: black;
+            padding: 14px 20px;   
+            display: block;
+            float: right;
+        }
+        .nav a:hover{
+            color:  black;
+            background-color: rgb(224, 216, 216);
+        }
+        .content{
+            width: 735px;
+            background-color:#DAB9A8;
+            margin: auto;
+            padding: 25px;
+            border: 1px solid #553E38;
+        }
+        .footer{
+            width: 735px;
+            color: white;
+            background-color:#041E37;
+            margin: auto;
+            text-align: right;
+            padding: 20px;
+            font-family: High Tower Text;
+            font-size: 15px;
+        }
+        #datetime{
+            text-align: left;
+            font-size: 14px;
+            opacity: 0.85;
+        }
+        .card{
+            background-color: #E6CFC2;
+            border: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="header"></div>
+
+<div class="nav-wrapper">
+    <ul class="nav nav-underline justify-content-end px-3">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="Galeri.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link active" href="Form.html">Recommendation</a></li>
+        <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+    </ul>
+</div>
+
+<div class="content">
+
+    <!-- FORM REKOMENDASI ANIME -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+
+            <h2 class="text-center mb-4">Rekomendasi Anime Wajib Ditonton</h2>
+
+            <form method="post" action="">
+
+                <div class="mb-3">
+                    <label class="form-label">Nama Pengunjung</label>
+                    <input type="text" class="form-control" placeholder="Masukkin nama kamu" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Judul Anime</label>
+                    <input type="text" class="form-control" placeholder="Judul anime" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Tahun Rilis</label>
+                    <input type="number" class="form-control" placeholder="Contoh: 2021">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label d-block">Genre Anime</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox"> Action
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox"> Romance
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox"> Comedy
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox"> Fantasy
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox"> Sports
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Alasan Rekomendasi</label>
+                    <textarea class="form-control" rows="4"
+                    placeholder="Ceritain alasan kenapa anime ini wajib ditonton" required></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label d-block">Tingkat Rekomendasi</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rating"> Sangat Wajib Ditonton
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rating"> Direkomendasikan
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rating"> Lumayan Menarik
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Karakter Favorit</label>
+                    <input type="text" class="form-control" placeholder="Opsional">
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Upload Poster Anime</label>
+                    <input type="file" class="form-control">
+                </div>
+
+                <div class="text-end">
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+<div id="datetime"></div>
+    &copy; CopyRight Septiana Nur Fauziah | 251011700236 | 01SIFP004
+</div>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Menu Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    function updateDateTime() {
+    const now = new Date();
+
+    const hari = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+    const bulan = [
+        "Januari","Februari","Maret","April","Mei","Juni",
+        "Juli","Agustus","September","Oktober","November","Desember"
+    ];
+
+    const hariIni = hari[now.getDay()];
+    const tanggal = now.getDate();
+    const bulanIni = bulan[now.getMonth()];
+    const tahun = now.getFullYear();
+
+    const jam = String(now.getHours()).padStart(2, '0');
+    const menit = String(now.getMinutes()).padStart(2, '0');
+    const detik = String(now.getSeconds()).padStart(2, '0');
+
+    document.getElementById("datetime").innerHTML =
+        `${hariIni}, ${tanggal} ${bulanIni} ${tahun} | ${jam}:${menit}:${detik} WIB`;
+    }
+
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+    </script>
+
+    <style>
+        body{
+            margin: 0;
+            background-color:#553E38;
+        }
+        .header{
+            width: 735px;
+            height: 245px;
+            background-color: #0c273f;
+            background-image: url(banner.jpeg);
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .nav-wrapper {
+            width: 735px;              
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;   
+        }
+        .nav{
+            background-color: #DAB9A8;
+            overflow: hidden;
+        }
+        .nav a{
+            text-decoration: none;
+            color: black;
+            padding: 14px 20px;   
+            display: block;
+            float: right;
+        }
+        .nav a:hover{
+            color:  black;
+            background-color: rgb(224, 216, 216);
+        }
+        .active{
+            background-color:0;
+        }
+        .content{
+            width: 735px;
+            height: auto;
+            background-color:#DAB9A8;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            border: 1px solid #553E38 ;
+        }
+        .content h1{
+            color: #172935;
+            font-family: "Glober";
+            font-size: 40px;
+            text-align: center;
+        }
+        .content h2{
+            color: black;
+            font-family: High Tower Text;
+            font-size: 30px;
+        }
+        .content p{
+            color:black;
+            font-family: "Glober";
+            font-size: 20px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .content img{
+            width:300px;
+
+            padding-right: 10px;
+        }
+        .footer{
+            width: 735px;
+            height: auto;
+            color: white;
+            background-color:#041E37;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: right;
+            padding : 20px; 
+            font-family: High Tower Text; 
+            font-size: 15px;
+        }
+        #datetime{
+            text-align: left;
+            font-size: 14px;
+            opacity: 0.85;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="nav-wrapper">
+    <ul class="nav nav-underline justify-content-end px-3">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Galeri.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Form.html">Recommendation</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Contact.html">Contact</a>
+        </li>
+    </ul>
+</div>
+    <div class="content">
+        <!-- content awal -->
+            <h1><b>Tokoh dengan Character Development yang kuat</b></h1>
+                       
+            <p><b>1. Shoyo Hinata </b><br>
+            <img <img src="hinata shouyo.jpeg" width="200" height="275" align="right" vspace="5" hspace="10" title="hinata">
+            <p>merupakan tokoh utama yang mengalami perkembangan karakter paling konsisten sepanjang cerita. 
+            Di awal, Hinata digambarkan sebagai pemain bertubuh pendek dengan kemampuan dasar yang masih minim, 
+            namun memiliki semangat dan keinginan belajar yang sangat besar. Seiring berjalannya waktu, ia tidak hanya berkembang secara teknik, 
+            tetapi juga secara mental. Hinata belajar membaca permainan, bekerja sama dengan tim, dan memahami bahwa menjadi pemain hebat bukan hanya soal mencetak poin, 
+            melainkan berkontribusi untuk keseluruhan tim. Perjuangannya membuat banyak penonton merasa terinspirasi dan terhubung secara emosional.<br><br>
+            
+            <p><b>2. Tobio Kageyama</b><br>
+            <img <img src="Kageyama Tobio.jpeg" width="200" height="275" align="left" vspace="5" hspace="10" title="Kageyama">
+            <p>dikenal sebagai karakter dengan perubahan kepribadian yang sangat signifikan. Awalnya, ia adalah setter berbakat yang egois dan sulit bekerja sama, 
+            hingga mendapat julukan <i>“King of the Court”.</i> Namun, melalui berbagai konflik dan kegagalan, Kageyama perlahan belajar memahami arti komunikasi dan kepercayaan dalam tim. 
+            Perkembangannya dari pemain individualis menjadi playmaker yang memperhatikan rekan setimnya menjadi salah satu aspek paling kuat dalam cerita Haikyuu!!, sekaligus alasan mengapa karakter ini sangat digemari.<br><br>
+            
+            <p><b>3. Kei Tsukishima </b><br>
+            <img <img src="Kei.jpeg" width="200" height="275" align="right" vspace="5" hspace="10" title="Kei">
+            <p>merupakan contoh character development yang berjalan pelan namun sangat berdampak. Pada awalnya, Tsukishima bersikap sinis dan menganggap voli hanya sebagai permainan biasa. 
+            Ia menjaga jarak secara emosional karena pengalaman masa lalunya. Namun, momen-momen penting dalam pertandingan membuatnya menyadari arti berjuang sepenuh hati. Perubahan cara pandangnya terhadap voli menjadi 
+            salah satu adegan paling berkesan dalam anime, dan membuat banyak penonton merasa puas melihat transformasi karakternya.<br><br>
+                        
+            <p><b>4. Toru Oikawa</b><br>
+            <img <img src="Oikawa Toru.jpeg" width="130" height="275" align="left" vspace="5" hspace="10" title="Oikawa">
+            <p>adalah karakter rival yang sangat kompleks dan disukai banyak penonton. Berbeda dengan pemain jenius alami, Oikawa digambarkan sebagai sosok yang mencapai level tinggi melalui kerja keras dan dedikasi. 
+            Rasa iri, ketakutan akan kalah, serta ambisinya ditampilkan secara jujur dan manusiawi. Karakter ini menunjukkan bahwa kelemahan mental juga merupakan bagian dari perjuangan seorang atlet, sehingga membuatnya terasa sangat realistis dan mudah dipahami oleh penonton.<br><br>
+            
+            <p><b>5. Kenma Kozume </b><br>
+            <img <img src="himiko.jpeg" width="200" height="275" align="left" vspace="5" hspace="10" title="Kenma">
+            <p>memiliki perkembangan karakter yang lebih halus namun mendalam. Ia merupakan pribadi introvert yang awalnya bermain voli hanya karena dorongan lingkungan, bukan karena ambisi pribadi. Seiring waktu, 
+            Kenma mulai menemukan kesenangan dalam tantangan dan arti keberadaannya bagi tim Nekoma. Prosesnya menerima bahwa dirinya memiliki peran penting membuat karakter ini sangat disukai, terutama oleh penonton yang memiliki kepribadian pendiam atau tertutup.<br><br>
+            
+            <p><b>6. Asahi Azumane</b><br>
+            <img <img src="Azumane.jpeg" width="200" height="275" align="right" vspace="5" hspace="10" title="Azumane">
+            <p>Selain itu, Asahi Azumane juga memiliki perkembangan karakter yang kuat. Sebagai ace Karasuno, Asahi memiliki kemampuan luar biasa, tetapi sering dihantui rasa takut dan kurang percaya diri. Perjalanannya untuk bangkit dari kegagalan dan kembali mempercayai dirinya sendiri menggambarkan 
+            sisi rapuh seorang atlet yang jarang ditampilkan secara jujur. Hal ini membuat Asahi menjadi karakter yang sangat manusiawi dan relatable.
+            <!-- content akhir -->
+    </div>
+    <div class="footer">
+    <div id="datetime"></div>
+            &copy; CopyRight Septiana Nur Fauziah | 251011700236 | 01SIFP004
+    </div>
+</body>
+</html>

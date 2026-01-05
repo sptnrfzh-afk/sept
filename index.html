@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Menu Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    function updateDateTime() {
+    const now = new Date();
+
+    const hari = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+    const bulan = [
+        "Januari","Februari","Maret","April","Mei","Juni",
+        "Juli","Agustus","September","Oktober","November","Desember"
+    ];
+
+    const hariIni = hari[now.getDay()];
+    const tanggal = now.getDate();
+    const bulanIni = bulan[now.getMonth()];
+    const tahun = now.getFullYear();
+
+    const jam = String(now.getHours()).padStart(2, '0');
+    const menit = String(now.getMinutes()).padStart(2, '0');
+    const detik = String(now.getSeconds()).padStart(2, '0');
+
+    document.getElementById("datetime").innerHTML =
+        `${hariIni}, ${tanggal} ${bulanIni} ${tahun} | ${jam}:${menit}:${detik} WIB`;
+    }
+
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+    </script>
+
+    <style>
+        body{
+            margin: 0;
+            background-color:#553E38;
+        }
+        .header{
+            width: 735px;
+            height: 245px;
+            background-color: #0c273f;
+            background-image: url(banner.jpeg);
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .nav-wrapper {
+            width: 735px;              
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;   
+        }
+        .nav{
+            background-color: #DAB9A8;
+            overflow: hidden;
+        }
+        .nav a{
+            text-decoration: none;
+            color: black;
+            padding: 14px 20px;   
+            display: block;
+            float: right;
+        }
+        .nav a:hover{
+            color: black;
+            background-color: rgb(224, 216, 216);
+        }
+        .active{
+            background-color: 0;
+        }
+        .content{
+            width: 735px;
+            height: auto;
+            background-color:#DAB9A8;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            border: 1px solid #553E38 ;
+        }
+        .content h1{
+            color: #172935;
+            font-family: "Glober";
+            font-size: 40px;
+            text-align: center;
+            
+        }
+        .content h3{
+            color: black;
+            text-decoration:overline;
+            font-family: "Glober";
+            font-size: 25px ;
+            margin-top: 25px;
+            margin-bottom: 0;
+        }
+        .content p{
+            color:black;
+            font-family: "Glober";
+            font-size: 20px;
+            line-height: 1.4;
+            text-align: justify;
+            margin-top: 5px;
+        }
+        .content img{
+            width: 900px;
+            float: center;
+            padding-right: 10px;
+        }
+        .content ul,
+        .content li{
+            font-family: "Glober";
+            font-size: 20px;
+            color: black;
+            margin-bottom: 8px;
+            line-height: 1.1;
+        }
+        .footer{
+            width: 735px;
+            height: auto;
+            color: white;
+            background-color:#041E37;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: right;
+            padding : 20px; 
+            font-family: High Tower Text; 
+            font-size: 15px;
+        }
+        #datetime{
+            text-align: left;
+            font-size: 14px;
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="nav-wrapper">
+    <ul class="nav nav-underline justify-content-end px-3">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Galeri.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Form.html">Recommendation</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Contact.html">Contact</a>
+        </li>
+    </ul>
+</div>
+    <div class="content">
+        <!-- content awal -->
+            <h1><b>Haikyuu!!: Anime Olahraga yang Lebih dari Sekadar Pertandingan</b></h1><br>
+            <p>Anime <i>Haikyuu!!</i> merupakan salah satu anime bertema olahraga yang berhasil mencuri perhatian banyak penonton dari berbagai kalangan. 
+            Berfokus pada olahraga bola voli, anime ini tidak hanya menyajikan pertandingan yang menegangkan, tetapi juga menghadirkan kisah perjuangan, persahabatan, dan perkembangan karakter yang sangat kuat.<br>
+           
+            <h3><b>Jalan Cerita yang Inspiratif</b></h3>
+            <p>Cerita <i>Haikyuu!!</i> mengikuti perjalanan Shoyo Hinata, seorang siswa bertubuh pendek yang memiliki mimpi besar untuk menjadi pemain voli hebat. Terinspirasi oleh sosok “Little Giant”, Hinata bergabung dengan tim voli SMA Karasuno. 
+            Di sana, ia bertemu dengan Tobio Kageyama, rival sekaligus partner yang memiliki bakat luar biasa sebagai setter.
+            <p>Yang membuat jalan cerita Haikyuu!! menarik adalah bagaimana anime ini menampilkan proses, bukan hanya hasil. Kemenangan tidak datang secara instan, dan kekalahan justru menjadi bagian penting dalam pertumbuhan setiap karakter.
+<br>           
+            <h3><b>Hubungan Antar Karakter yang Kuat dan Realistis</b></h3>
+            <p>Salah satu kekuatan utama <i>Haikyuu!!</i> terletak pada dinamika hubungan antar karakter. Hubungan Hinata dan Kageyama yang awalnya penuh konflik berkembang menjadi kerja sama yang solid. Perbedaan kepribadian mereka justru saling melengkapi.
+            <p>Tidak hanya tim Karasuno, karakter dari tim lawan juga digambarkan dengan sangat manusiawi. Setiap pemain memiliki latar belakang, motivasi, dan mimpi masing-masing, sehingga penonton dapat memahami bahwa lawan bukanlah musuh, melainkan sesama pejuang di lapangan.
+
+            <h3><b>Pertandingan yang Intens dan Realistis</b></h3>
+            <p>Walaupun bertema olahraga, <i>Haikyuu!!</i> mampu menyajikan pertandingan yang terasa hidup dan mendebarkan. Setiap servis, receive, dan spike dianimasikan dengan detail, didukung oleh sinematografi yang dinamis serta musik latar yang membangun emosi.
+            <p>ini juga tidak berlebihan dalam menghadirkan kekuatan “super”. Semua kemampuan karakter tetap berada dalam batas logika olahraga, sehingga terasa realistis dan mudah dipahami, bahkan oleh penonton yang tidak familiar dengan bola voli.
+            
+            <h3><b>Pelajaran Berharga yang Bisa Diambil</b></h3>
+            <p>Haikyuu!! bukan sekadar hiburan, tetapi juga sarat dengan nilai kehidupan, di antaranya:
+            <ul>
+                <li>Kerja sama tim lebih penting daripada kemampuan individu</li>
+                <li>Kerja keras dan latihan konsisten mampu mengalahkan bakat semata</li>
+                <li>Kegagalan bukan akhir, melainkan bagian dari proses belajar</li>
+                <li>Menghargai lawan sebagai bentuk sportivitas</li>
+                <li>Percaya diri dan pantang menyerah meski memiliki keterbatasan</li>
+            </ul>
+            <p>Nilai-nilai ini membuat Haikyuu!! relevan bagi pelajar dan mahasiswa
+            
+            <h3><b>Karakter yang Relatable dan Berkembang</b></h3>
+            <p>Setiap karakter di Haikyuu!! mengalami perkembangan yang jelas, baik secara kemampuan maupun mental. Penonton dapat melihat bagaimana rasa minder, ego, rasa takut gagal, hingga kepercayaan diri dibangun perlahan seiring waktu.
+            <p>Hal inilah yang membuat banyak penonton merasa terhubung secara emosional dengan cerita dan karakter-karakternya.
+            
+            <h3><b>Mengapa Haikyuu!! Begitu Digemari?</b></h3>
+            <p>Popularitas <i>Haikyuu!!</i> tidak lepas dari:
+            <ul>
+                <li>Cerita yang membumi dan inspiratif</li>
+                <li>Karakter yang kuat dan berkesan</li>
+                <li>Visual dan animasi pertandingan yang memukau</li>
+                <li>Pesan moral yang relevan dengan kehidupan nyata</li>
+            </ul>
+            <p>Anime ini membuktikan bahwa cerita olahraga bisa menjadi sarana untuk menyampaikan nilai-nilai kehidupan dengan cara yang menyenangkan.
+
+            <h3><b>Kesimpulan</b></h3>
+            <p><i>Haikyuu!!</i> adalah anime yang berhasil menggabungkan olahraga, emosi, dan nilai kehidupan dalam satu cerita yang solid. 
+            Tidak heran jika anime ini digemari oleh berbagai kalangan dan sering direkomendasikan sebagai salah satu anime olahraga terbaik sepanjang masa.</p>
+            <!-- content akhir -->
+    </div>
+    <div class="footer">
+    <div id="datetime"></div>
+            &copy; CopyRight Septiana Nur Fauziah | 251011700236 | 01SIFP004
+    </div> 
+</body>
+</html>
